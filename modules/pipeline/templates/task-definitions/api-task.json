@@ -1,0 +1,34 @@
+[
+    {
+      "name": "${ProjectName}-container",
+      "image": "${image}",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080
+        }
+      ],
+      "cpu": "512",
+      "memory": "256",
+      "networkMode": "awsvpc",
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${log_group}",
+          "awslogs-region": "${aws_region}",
+          "awslogs-stream-prefix": "${ProjectName}"
+        }
+      },
+      "environment": [
+        {
+          "name": "FOO",
+          "value": "BAR"
+        },
+        {
+          "name" : "PORT",
+          "value": "${container_Port}"
+        }
+      ]
+    }
+  ]

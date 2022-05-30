@@ -1,0 +1,15 @@
+variable "cluster_name" {}
+variable "aws_region" {}
+variable "cluster_vpc" {}
+variable "private_subnet_1a" {}
+variable "private_subnet_1c" {}
+variable "ProjectName" {}
+variable "container_Port" {}
+variable "elb-arn" {}
+variable "logs-name" {}
+variable "ecs-id" {}
+variable "security_groups_ids" {}
+variable "git_repository_owner" {}
+variable "git_repository_name" {}
+variable "git_repository_branch" {}
+variable "git_token" {}
